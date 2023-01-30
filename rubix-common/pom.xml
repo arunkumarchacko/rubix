@@ -55,17 +55,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.readytalk</groupId>
-            <artifactId>metrics3-statsd</artifactId>
-            <version>${dep.metrics-statsd.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.readytalk</groupId>
-            <artifactId>metrics-statsd-common</artifactId>
-            <version>${dep.metrics-statsd.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${dep.testng.version}</version>
@@ -113,8 +102,6 @@
                                     <include>io.dropwizard.metrics:metrics-core</include>
                                     <include>io.dropwizard.metrics:metrics-ganglia</include>
                                     <include>com.google.guava:guava</include>
-                                    <include>com.readytalk:metrics-statsd-common</include>
-                                    <include>com.readytalk:metrics3-statsd</include>
                                 </includes>
                             </artifactSet>
                             <relocations>

@@ -18,7 +18,6 @@ import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.ganglia.GangliaReporter;
 import com.qubole.rubix.common.utils.ClusterUtil;
 import com.qubole.rubix.spi.CacheConfig;
-import com.readytalk.metrics.StatsDReporter;
 import info.ganglia.gmetric4j.gmetric.GMetric;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -84,15 +83,7 @@ public class BookKeeperMetrics implements AutoCloseable
           if (!CacheConfig.isOnMaster(conf)) {
             CacheConfig.setStatsDMetricsHost(conf, ClusterUtil.getMasterHostname(conf));
           }
-          final StatsDReporter statsDReporter = StatsDReporter.forRegistry(metrics)
-              .convertRatesTo(TimeUnit.SECONDS)
-              .convertDurationsTo(TimeUnit.MILLISECONDS)
-              .filter(metricsFilter)
-              .build(CacheConfig.getStatsDMetricsHost(conf), CacheConfig.getStatsDMetricsPort(conf));
-
-          log.debug(String.format("Reporting metrics to StatsD [%s:%d]", CacheConfig.getStatsDMetricsHost(conf), CacheConfig.getStatsDMetricsPort(conf)));
-          statsDReporter.start(CacheConfig.getMetricsReportingInterval(conf), TimeUnit.MILLISECONDS);
-          reporters.add(statsDReporter);
+          log.debug(String.format("Disabled statsd metrics"));
           break;
         case GANGLIA:
           if (!CacheConfig.isOnMaster(conf)) {

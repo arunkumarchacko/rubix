@@ -180,18 +180,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.readytalk</groupId>
-                <artifactId>metrics3-statsd</artifactId>
-                <version>${dep.metrics-statsd.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.readytalk</groupId>
-                <artifactId>metrics-statsd-common</artifactId>
-                <version>${dep.metrics-statsd.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.weakref</groupId>
                 <artifactId>jmxutils</artifactId>
                 <version>1.18</version>
