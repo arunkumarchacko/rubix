@@ -38,14 +38,6 @@
             <groupId>com.qubole.rubix</groupId>
             <artifactId>rubix-client</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.qubole.rubix</groupId>
-            <artifactId>rubix-presto</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.qubole.rubix</groupId>
-            <artifactId>rubix-prestosql</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
@@ -74,8 +66,6 @@
                                     <include>com.qubole.rubix:rubix-core</include>
                                     <include>com.qubole.rubix:rubix-bookkeeper</include>
                                     <include>com.qubole.rubix:rubix-hadoop2</include>
-                                    <include>com.qubole.rubix:rubix-prestosql</include>
-                                    <include>com.qubole.rubix:rubix-presto</include>
                                     <include>com.qubole.rubix:rubix-client</include>
                                 </includes>
                             </artifactSet>

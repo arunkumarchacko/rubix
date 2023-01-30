@@ -52,10 +52,6 @@
             <groupId>com.qubole.rubix</groupId>
             <artifactId>rubix-hadoop2</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.qubole.rubix</groupId>
-            <artifactId>rubix-presto</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
